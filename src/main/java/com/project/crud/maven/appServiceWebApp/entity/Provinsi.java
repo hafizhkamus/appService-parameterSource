@@ -14,7 +14,6 @@ import java.io.Serializable;
 
 @Validated
 @Entity
-@Table(name = "provinsi")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @Data
 public class Provinsi  {
@@ -22,11 +21,9 @@ public class Provinsi  {
     @Id
     @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "kodeBps")
     private Integer kodeBps;
 
     @NotEmpty
     @Size(max = 20)
-    @Column(name = "namaProvinsi")
     private String namaProvinsi;
 }

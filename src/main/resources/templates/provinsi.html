@@ -28,7 +28,7 @@
                             <td th:text="${prov.kodeBps}"></td>
                             <td th:text="${prov.namaProvinsi}"></td>
                             <td><a th:href="@{|/provinsidetails/${prov.kodeBps}|}">edit</a></td>
-                            <td><a th:href="@{|/delete/${prov.kodeBps}|}">edit</a></td>
+                            <td><a th:href="@{/delete/{id}(id=${prov.kodeBps})}">delete</a></td>
                         </tr>
                         </tbody>
                     </table>
