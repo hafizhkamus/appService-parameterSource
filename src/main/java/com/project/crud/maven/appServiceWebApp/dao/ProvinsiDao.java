@@ -54,11 +54,11 @@ public class ProvinsiDao {
         });
     }
 
-    public void deleteProvinsi(Integer id) throws DataAccessException {
+    public void deleteProvinsi(Provinsi provinsi) throws DataAccessException {
         String baseQuery = "delete from provinsi where kodeBps = :kodeBps";
 
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
-        parameterSource.addValue("kodeBps", id);
+        parameterSource.addValue("kodeBps", provinsi.getKodeBps());
 
         jdbcTemplate.update(baseQuery,parameterSource);
     }

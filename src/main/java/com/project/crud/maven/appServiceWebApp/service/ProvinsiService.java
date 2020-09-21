@@ -31,8 +31,8 @@ public class ProvinsiService {
         return dao.findAll();
     }
 
-    public void delete(Integer id) throws DataAccessException {
-        dao.deleteProvinsi(id);
+    public void delete(Provinsi provinsi) throws DataAccessException {
+        dao.deleteProvinsi(provinsi);
     }
 
 //    public Provinsi findById(Integer id) throws EmptyResultDataAccessException {

@@ -71,9 +71,9 @@ public class ProvinsiController {
 
     @GetMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") Integer id, Model model) {
-//        Provinsi prov = provrepo.findById(id)
-//                .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
-        service.delete(id);
+        Provinsi prov = provrepo.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+        service.delete(prov);
         model.addAttribute("provinsi", provrepo.findAll());
         return "list-provinsi";
     }
